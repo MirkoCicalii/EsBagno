@@ -9,11 +9,15 @@ package esbagno;
  *
  * @author PC
  */
-public class runnable1 implements Runnable {
-    
-    public void run(){
-        bagno U1= new bagno();
-        U1.Uomo();
+public class Persona implements Runnable {
+     bagno x;
+
+    public Persona(bagno x) {
+        this.x = x;
+    }
+     
+     public void run(){
+        x.Bagnogenerico();
     }
     
     

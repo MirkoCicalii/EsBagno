@@ -14,9 +14,15 @@ import java.util.logging.Logger;
  */
 public class bagno {
     
-    synchronized void Uomo(){
+    public String Tipo;
+
+    public bagno(String Tipo) {
+        this.Tipo = Tipo;
+    }
+    
+    synchronized void Bagnogenerico(){
         
-        System.out.println("Un Uomo è entrato");
+        System.out.println("Un "+Tipo+" è entrato");
         try {
             Thread.sleep(5000);
             
@@ -24,9 +30,8 @@ public class bagno {
             
             Logger.getLogger(bagno.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("Un uomo è uscito");
+        System.out.println("Un"+Tipo+ " è uscito");
     }
-   
-    
+ 
     
 }

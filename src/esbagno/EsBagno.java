@@ -14,19 +14,24 @@ public class EsBagno {
     
     public static void main(String[] args) {
        
-        Runnable R1= new runnable1();
-        Runnable R2= new runnable2();
+        bagno b1 = new bagno ("Uomo");
+        bagno b2 = new bagno ("Donna");
+        
+        Runnable R1= new Persona(b1);
+        Runnable R2= new Persona(b2);
        
         
-        Thread thr1=new Thread(R1);
-        Thread thr2=new Thread(R2);
-        Thread thr3=new Thread(R1);
-        Thread thr4=new Thread(R2);
+        Thread Uomo1=new Thread(R1);
+        Thread Uomo2=new Thread(R2);
         
-        thr1.start();
-        thr2.start();
-        thr3.start();
-        thr4.start();
+        Thread Donna1=new Thread(R1);
+        Thread Donna2=new Thread(R2);
+        
+        Uomo1.start();
+        Uomo2.start();
+        
+        Donna1.start();
+        Donna2.start();
         
     }
     
